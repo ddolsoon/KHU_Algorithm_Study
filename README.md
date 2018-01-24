@@ -1,7 +1,7 @@
-# KHU_Algorithm_Study
+﻿# KHU_Algorithm_Study
 ## Algorithm Sutdy Group
 - jinman
-- minseong
+- ddolsoon
 
 ## 개요
 - 자료구조 공부
@@ -10,7 +10,7 @@
 ```
 KHU_Algorithm_Study
     │   └── * root directory
-    ├── minseong
+    ├── ddolsoon
     │   └── 민성 알고리즘 폴더
     ├── jinman
     │   └──  진우 알고리즘 폴더
