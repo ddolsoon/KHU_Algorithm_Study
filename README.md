@@ -10,6 +10,8 @@
 ```
 KHU_Algorithm_Study
     │   └── * root directory
+    ├── algorithm_study
+    │   └── 알고리즘 스터디 공동 자료실(스터디 당일 푼 문제 및 회의록 저장)
     ├── ddolsoon
     │   └── 민성 알고리즘 폴더
     ├── jinman
