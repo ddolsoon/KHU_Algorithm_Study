@@ -1,6 +1,6 @@
 ﻿# KHU_Algorithm_Study
 ## Algorithm Sutdy Group
-- jinman
+- jinuman
 - ddolsoon
 
 ## 개요
@@ -14,8 +14,8 @@ KHU_Algorithm_Study
     │   └── 알고리즘 스터디 공동 자료실(스터디 당일 푼 문제 및 회의록 저장)
     ├── ddolsoon
     │   └── 민성 알고리즘 폴더
-    ├── jinman
-    │   └──  진우 알고리즘 폴더
+    ├── jinuman
+    │   └── 진우 알고리즘 폴더
     ├── 기출문제
     │   └── 각종 대회 및 경시대회 / 코딩 인터뷰에서 나온 기출 모음집  
     │        
@@ -33,7 +33,7 @@ KHU_Algorithm_Study
 4. 알고리즘 올릴 때, Debug 폴더 및 .vs 임시파일 제거해서 올릴것(프로젝트 커짐)
 
 ## 사용환경
-Visual Studio 2017
+Visual Studio 2017, CLion
 
 ## 참고사항
 ----
