@@ -2,9 +2,10 @@
 ## Algorithm Sutdy Group
 - jinuman
 - ddolsoon
+- sheep1500
 
 ## Samsung SW Test 자료실
- 
+
 * 자료실 소개 : SW Test에서 풀었던 문제 업로드
 * 목표 : D2 ~ D4 까지 모두 푸는걸 목표로 만들어진 자료실 
 * 작성 원칙
