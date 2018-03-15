@@ -40,7 +40,21 @@ KHU_Algorithm_Study
 
 ## Git Flow
 
+```
+<master> $ git pull
+<master> $ git checkout (-b,없는 branch일 경우!) branch
 
+<branch> $ git add file
+<branch> $ git commit -m "add file"
+<branch> $ git add file2
+<branch> $ git commit -m "add file2"
+...
+
+<branch> $ git push origin branch
+<branch> $ git fetch origin
+
+
+```
 
 ## 사용환경
 Visual Studio 2017, CLion
