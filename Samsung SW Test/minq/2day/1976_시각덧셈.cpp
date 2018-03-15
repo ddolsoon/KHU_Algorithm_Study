@@ -14,14 +14,15 @@ int main()
 		answerTime = 0;
 		answerMinute = 0;
 		cin >> firstTime >> firstMinute >> secondTime >> secondMinute;
-		answerTime = (firstTime + secondTime) % 12;
 		answerMinute = firstMinute + secondMinute;
 		if (answerMinute >= 60)
 		{
 			answerTime += 1;
 			answerMinute %= 60;
 		}
-		
+		answerTime += (firstTime + secondTime) % 12;
+		if (answerTime == 0)
+			answerTime = 12;
 		cout << '#' << i << " " << answerTime << " " << answerMinute << endl;
 	}
 
