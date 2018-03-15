@@ -52,8 +52,7 @@ KHU_Algorithm_Study
 
 <branch> $ git push origin branch
 <branch> $ git fetch origin
-
-
+<branch> $ git merge origin branch
 ```
 
 ## 사용환경
