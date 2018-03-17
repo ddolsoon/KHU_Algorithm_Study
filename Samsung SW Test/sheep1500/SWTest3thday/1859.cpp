@@ -15,7 +15,6 @@ int main() {
         for(int i=0;i<n;i++)
             cin>>arr[i];
 
-
         int max_index = n-1;
         int start_index = 0;
         long long sum = 0;
