@@ -2,6 +2,8 @@
 ## Algorithm Sutdy Group
 - jinuman
 - ddolsoon
+- minq
+- sheep1500
 
 ## 개요
 - 자료구조 공부
@@ -23,6 +25,9 @@ KHU_Algorithm_Study
     │   └── 알고리즘 분석 공부 자료실
     ├── Samsung SW Test
     │   └── 삼성 SW 테스트 공부 자료실
+    ├── TG Wing Algorithm
+    │   └── TG Wing Algorithm 공부 자료실
+    |
     ├── etc
 	└── * 기타 자료
 
