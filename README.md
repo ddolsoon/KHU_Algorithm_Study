@@ -36,6 +36,25 @@ KHU_Algorithm_Study
 3. 1주일에 한번씩 스터디를 통해서, 알고리즘 능력을 향상시킨다.
 4. 알고리즘 올릴 때, Debug 폴더 및 .vs 임시파일 제거해서 올릴것(프로젝트 커짐)
 
+
+
+## Git Flow
+
+```
+<master> $ git pull
+<master> $ git checkout (-b,없는 branch일 경우!) branch
+
+<branch> $ git add file
+<branch> $ git commit -m "add file"
+<branch> $ git add file2
+<branch> $ git commit -m "add file2"
+...
+
+<branch> $ git push origin branch
+<branch> $ git fetch origin
+<branch> $ git merge origin branch
+```
+
 ## 사용환경
 Visual Studio 2017, CLion
 
