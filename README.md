@@ -55,8 +55,8 @@ KHU_Algorithm_Study
 <branch> $ git commit -m "add file2"
 ...
 
-<branch> $ git push origin branch
 <branch> $ git fetch origin
+<branch> $ git push origin branch
 <branch> $ git merge origin branch
 ```
 
