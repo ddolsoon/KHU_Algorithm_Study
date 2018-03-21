@@ -5,17 +5,20 @@ using namespace std;
 int sequence[1000];
 int D[1000];
 int main()
+
 {
-	
+
 	int seQuenceSize;
 	int testCaseSize;
+	int answer;
 	cin >> testCaseSize;
-	
+
 	for (int T = 1; T <= testCaseSize; T++)
 	{
 		memset(sequence, 0, sizeof(sequence));
 		memset(D, 0, sizeof(D));
-		
+
+		answer = 0;
 		scanf("%d", &seQuenceSize);
 
 		for (int i = 0; i < seQuenceSize; i++)
@@ -32,9 +35,12 @@ int main()
 				{
 					D[j] = D[k] + 1;
 				}
+
 			}
+			if (answer < D[j])
+				answer = D[j];
 		}
-		cout << "#" << T << " " << D[seQuenceSize -1 ] << endl;
+		cout << "#" << T << " " << answer << endl;
 	}
 	return 0;
 }
