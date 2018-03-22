@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(){
+    
     int T;
     cin >> T;
     string str = "";
@@ -14,11 +15,24 @@ int main(){
         cout << '#' << i + 1 << ' ';
         for (int j = 1; j < str.size(); ++j) {
             if(str[0] == str[j]){
-                cout << j;
-                break;
+                if (str[j-1] == str[j]) {
+                    /**
+                     * 만약 같은 문자가 연속된다면 예외처리 해줌
+                     */
+                    for (int k = 0; k < str.size(); ++k) {
+                        if (str[0] != str[k]) {
+                            cout << k * 2 + 1 <<'\n';
+                            break;
+                        }
+                    }
+                    break;
+                } else {
+                    cout << j << '\n';
+                    break;
+                }
+
             }
         }
-        cout << '\n';
     }
     return 0;
 }
