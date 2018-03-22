@@ -46,17 +46,20 @@ KHU_Algorithm_Study
 ## Git Flow
 
 ```
+// This is only for renewing master , not for one's branch
 <master> $ git pull
-<master> $ git checkout (-b,없는 branch일 경우!) branch
 
+...
+<branch> $ git fetch origin
+<branch> $ git merge origin branch
 <branch> $ git add file
 <branch> $ git commit -m "add file"
 <branch> $ git add file2
 <branch> $ git commit -m "add file2"
-...
-
-<branch> $ git fetch origin
 <branch> $ git push origin branch
+
+...
+<branch> $ git fetch origin
 <branch> $ git merge origin branch
 ```
 
