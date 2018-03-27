@@ -1,37 +1,65 @@
 #include <iostream>
 #include <cstring>
-#include <vector>
 #include<algorithm>
 
-#define SIZE 101
+#define SIZE 10
 
 using namespace std;
 
+int ans;
+int N;
 int arr[SIZE][SIZE];
-int memo[SIZE][SIZE];
-int dx[] = {0,0,1,-1};
-int dy[] = {1,-1,0,0};
-int M,N;
-int min_value=10000;
 
-vector<pair<int,int>> v;
-bool check = true;
+bool check_col[15];
+bool check_dig[40];
+bool check_dig2[40];
 
-void bfs(){
-    
+bool check(int row,int col){
+
+    if(check_col[col])
+        return false;
+    if(check_dig[row+col])
+        return false;
+    if(check_dig2[row-col+N])
+        return false;
+
+    return true;
 }
 
-
-int main() {
-    memset(arr,0,sizeof(arr));
-    scanf("%d %d",&N,&M);
-    for(int i=1;i<=N;i++){
-        for(int j=1;j<=M;j++) {
-            scanf("%1d",&arr[i][j]);
+int calc(int row){
+    if(row==N){
+        return 1;
+    }
+    int cnt = 0;
+    for(int col = 0;col<N;col++){
+        if(check(row,col)){
+            check_dig[row+col] = true;
+            check_dig2[row-col+N] = true;
+            check_col[col] = true;
+            arr[row][col] = true;
+            cnt+=calc(row+1);
+            check_dig[row+col] = false;
+            check_dig2[row-col+N] = false;
+            check_col[col] = false;
+            arr[row][col] = false;
         }
     }
-    bfs();
-    printf("%d\n",min_value);
-    return 0;
+    return cnt;
 }
 
+int main() {
+    int t;
+    int c=0;
+    scanf("%d",&t);
+
+    while(c++<t){
+        ans =0;
+        scanf("%d",&N);
+        memset(arr,0,sizeof(arr));
+
+        ans = calc(0);
+
+        printf("#%d %d\n",c,ans);
+    }
+    return 0;
+}

@@ -1,37 +1,50 @@
 #include <iostream>
 #include <cstring>
-#include <vector>
 #include<algorithm>
 
-#define SIZE 101
+#define SIZE 10
 
 using namespace std;
 
-int arr[SIZE][SIZE];
-int memo[SIZE][SIZE];
-int dx[] = {0,0,1,-1};
-int dy[] = {1,-1,0,0};
-int M,N;
-int min_value=10000;
+int ans;
+int N;
+int arr[SIZE];
 
-vector<pair<int,int>> v;
-bool check = true;
-
-void bfs(){
-    
+bool isPromising(int index){
+    for(int i=0;i<index;i++){
+        if(arr[i]==arr[index]) return false;
+        if((arr[i]-arr[index])==index-i) return false;
+        if((arr[index]-arr[i])==index-i) return false;
+    }
+    return true;
 }
 
-
-int main() {
-    memset(arr,0,sizeof(arr));
-    scanf("%d %d",&N,&M);
-    for(int i=1;i<=N;i++){
-        for(int j=1;j<=M;j++) {
-            scanf("%1d",&arr[i][j]);
+void dfs(int size){
+    if(size==N){
+        ans++;
+    }else{
+        for(int i=0;i<N;i++){
+            arr[size]=i;
+            if(isPromising(size))
+                dfs(size+1);
         }
     }
-    bfs();
-    printf("%d\n",min_value);
-    return 0;
+
 }
 
+int main() {
+    int t;
+    int c=0;
+    scanf("%d",&t);
+
+    while(c++<t){
+        ans =0;
+        scanf("%d",&N);
+        memset(arr,0,sizeof(arr));
+
+        dfs(0);
+
+        printf("#%d %d\n",c,ans);
+    }
+    return 0;
+}
