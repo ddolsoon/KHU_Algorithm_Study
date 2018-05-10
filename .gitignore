@@ -35,3 +35,7 @@
 *.iml
 .idea
 out
+
+#pycharm
+__pycache__
+venv
